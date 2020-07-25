@@ -1,7 +1,5 @@
 #include <Servo.h>
 
-
-
 int anglex=90;
 int rx=90;
 int ry=90;
@@ -18,8 +16,6 @@ Servo myservo_y;// create servo object to control a servo
 
 // twelve servo objects can be created on most boards
 
-
-
 //int pos = 0;    // variable to store the servo position
 
 int i = 0;
@@ -35,19 +31,8 @@ void setup() {
 
  
 }
-
-
-
-
-
 void loop()
 {
-  
-// myservo_x.write(anglex);
-
-//  myservo_y.write(angley);
-
-
     
 if(Serial.available()>0)
 {
@@ -115,87 +100,3 @@ if(read_flag == 2)
 
 
 }
-
-
-
-
-
-/*void loop() {
-
-  while (Serial.available() == 0) {
-
-    //    data_x=Serial.read();
-
-    //    data_y=Serial.read();
-
-    for (int i = 0; i <= 1; i++) {
-
-      data[i] = Serial.read();
-
-    }
-
-
-
-    myservo_x.write(data[0]);
-
-    myservo_y.write(data[1]);
-
-
-
-    Serial.println(data[0]);
-
-    Serial.println(data[1]);
-
-  }
-
-  
-
-}*/
-
-
-
-
-
-
-
-
-
-
-
-/*if(i = 3)
-{
-i = 0;
-myservo_x.write(anglex);
-//Serial.println(data[0]);
-
-delay(500);
-}*/
-
-
-/*if(Serial.available()==1)
-{
-angleTempy= Serial.readString();
-
-  
- for(i=0;i<3;i++)
-{
-  if(i==0)
-  angley=(angleTempy[i]-'0');
-  if(i==1)
-  angley=angley+((angleTempy[i]-'0')*10);
-  if(i==2)
-  angley=angley+((angleTempy[i]-'0')*100);
-  
-    
-  
- }
-}*/
-
-/*if(i = 3)
-{
-i = 0;
-myservo_y.write(angley[0]);
-//Serial.println(data[0]);
-
-delay(500);
-}*/
